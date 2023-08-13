@@ -1,3 +1,3 @@
 <?php
 
-echo "This is first app with docker app2.0";
+echo "This is first app with docker app3.0";
