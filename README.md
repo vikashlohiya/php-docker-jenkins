@@ -1,4 +1,4 @@
-# node-todo-cicd
+# Php App with CICD
 
 Run these commands:
 
@@ -19,14 +19,22 @@ Run these commands:
  `wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -`
  `sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'`
 
-  # Add Jenkins Repository
-  `sudo apt update`
-  `sudo apt install jenkins`
-  `sudo systemctl start jenkins`
-  `sudo systemctl enable jenkins`
+  # Install and enable 
+  `sudo apt update`  
+  `sudo apt install jenkins`  
+  `sudo systemctl start jenkins`  
+  `sudo systemctl enable jenkins`  
 
   # Open Jenkin Url on host machine using 8080 port
    Like-'http://54.172.138.86:8080/'
+   
+   Step1 : Replace your host ip   
+   Step2 : Unlock Genkins using password and set profile  
+   Step3: Create job by selecting "Pipeline" Option  
+
+   ![image](https://github.com/vikashlohiya/php-docker-jenkins/assets/62418120/e51f5a97-2a2e-44ec-949a-f3450cbe164e)
+
+   
 
   # Create Pipe Line 
 
@@ -43,6 +51,11 @@ Run these commands:
   In Defination option , you have to select  , Pipeline script from SCM
 
   ![image](https://github.com/vikashlohiya/php-docker-jenkins/assets/62418120/ec8be475-afd7-4d97-a89c-112b2b439ad2)
+
+
+  # Add Jenkins user to Docker group to deploy CICD
+   `sudo usermod -aG docker jenkins`
+
 
 
   
